@@ -5,17 +5,16 @@
 <script>
 $(document).ready(function(){
   $("button").click(function(){
-	
-    $.get("ajax2.jsp",{ name:"Donald", town:"Ducktown" }, function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
+    $("#div1").load("ajax1.jsp");
   });
 });
 </script>
 </head>
 <body>
 
-<button>Send an HTTP GET request to a page and get the result back</button>
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
 
 </body>
 </html>
